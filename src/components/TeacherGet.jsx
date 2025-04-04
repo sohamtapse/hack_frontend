@@ -42,7 +42,7 @@ const TeacherGet = () => {
 
       <input
         type="file"
-        accept="application/pdf"
+        accept=".pdf,application/pdf"
         onChange={handleFileChange}
         className="mb-4 bg-white text-black p-2 rounded w-full"
       />
