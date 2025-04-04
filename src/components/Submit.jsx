@@ -23,12 +23,12 @@ const Submit = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center my-10  bg-zinc-700 text-white  border-white border-2 rounded-xl">
-      <h1 className="text-3xl font-bold my-4"></h1>
+    <div className="flex flex-col items-center justify-center my-10 w-[1000px] bg-zinc-700 text-white  border-white border-2 rounded-xl">
+      <h1 className="text-3xl font-bold my-4 mx-5">Check Your Ans</h1>
 
       <button
         onClick={handleExecuteNotebook}
-        className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded text-white"
+        className="bg-blue-500 hover:bg-blue-600 m-4 p-2 rounded text-white"
         disabled={loading}
       >
         {loading ? "Executing..." : "Run Notebook"}

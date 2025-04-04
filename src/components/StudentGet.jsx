@@ -39,7 +39,7 @@ const StudentGet = () => {
   };
   return (
     <div className="flex flex-col  items-center justify-center bg-zinc-700 p-10 mt-5 text-white border-white border-2 rounded-xl w-[450px]">
-      <h1 className="text-3xl font-bold mb-5">Uplode Assignment PDF</h1>
+      <h1 className="text-3xl font-bold mb-5">Student submission hub</h1>
 
       <input
         type="file"
