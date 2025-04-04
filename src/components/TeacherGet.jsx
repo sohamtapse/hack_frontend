@@ -1,18 +1,13 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 const TeacherGet = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [response, setResponse] = useState(null);
   const [loading, setLoading] = useState(false);
-  const inputRef = useRef();
 
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
-  };
-
-  const handleUploadClick = () => {
-    inputRef.current?.click(); // Opens file picker (mobile-friendly)
   };
 
   const handleUpload = async () => {
@@ -45,24 +40,13 @@ const TeacherGet = () => {
         Answer key Repository
       </h1>
 
-      {/* Hidden file input */}
       <input
         type="file"
-        accept=".pdf,application/pdf"
+        accept="application/pdf"
         onChange={handleFileChange}
-        ref={inputRef}
-        style={{ display: "none" }}
+        className="mb-4 bg-white text-black p-2 rounded w-full"
       />
 
-      {/* Button to trigger file selection */}
-      <button
-        onClick={handleUploadClick}
-        className="bg-gray-500 hover:bg-gray-600 px-4 py-2 rounded text-white w-full mb-3"
-      >
-        Select PDF
-      </button>
-
-      {/* Button to upload selected file */}
       <button
         onClick={handleUpload}
         className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded text-white w-full"
