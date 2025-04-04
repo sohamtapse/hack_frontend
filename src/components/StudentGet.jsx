@@ -38,26 +38,28 @@ const StudentGet = () => {
     }
   };
   return (
-    <div className="flex flex-col  items-center justify-center bg-zinc-700 p-10 mt-5 text-white border-white border-2 rounded-xl w-[450px]">
-      <h1 className="text-3xl font-bold mb-5">Student submission hub</h1>
+    <div className="flex flex-col items-center justify-center bg-zinc-700 p-6 sm:p-10 mt-5 text-white border-white border-2 rounded-xl w-[90%] sm:w-[450px]">
+      <h1 className="text-2xl sm:text-3xl font-bold mb-5 text-center">
+        Student submission hub
+      </h1>
 
       <input
         type="file"
         accept="application/pdf"
         onChange={handleFileChange}
-        className="mb-4 bg-white text-black p-2 rounded"
+        className="mb-4 bg-white text-black p-2 rounded w-full"
       />
 
       <button
         onClick={handleUpload}
-        className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded text-white"
+        className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded text-white w-full"
         disabled={loading}
       >
         {loading ? "Uploading..." : "Upload"}
       </button>
 
       {response && (
-        <div className="mt-4 p-4 bg-gray-800 rounded">
+        <div className="mt-4 p-4 bg-gray-800 rounded w-full overflow-x-auto text-sm break-words">
           <p>
             <strong>Original PDF:</strong> {response.filename}
           </p>
