@@ -13,7 +13,11 @@ const Submit = () => {
     console.log("h");
     try {
       console.log("2");
-      const response = await Axios.get("/getOp");
+      const response = await Axios.post("/getOp", {
+        headers: {
+          "Cache-Control": "no-cache",
+        },
+      });
       console.log("1");
       setOutput(response.data.classification_output);
     } catch (err) {
