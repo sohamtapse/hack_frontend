@@ -21,9 +21,13 @@ const TeacherGet = () => {
 
     try {
       setLoading(true);
-      const res = await axios.post("http://localhost:8000/upload", formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+      const res = await axios.post(
+        "https://cc17-103-249-89-165.ngrok-free.app/upload",
+        formData,
+        {
+          headers: { "Content-Type": "multipart/form-data" },
+        }
+      );
 
       setResponse(res.data);
     } catch (error) {

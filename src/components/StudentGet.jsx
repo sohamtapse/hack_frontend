@@ -22,7 +22,7 @@ const StudentGet = () => {
     try {
       setLoading(true);
       const res = await axios.post(
-        "http://localhost:8000/studentUpload",
+        "https://cc17-103-249-89-165.ngrok-free.app/studentUpload",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },

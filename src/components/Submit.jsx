@@ -12,7 +12,9 @@ const Submit = () => {
     setError(null);
 
     try {
-      const response = await axios.get("http://127.0.0.1:8000/getOp");
+      const response = await axios.get(
+        "https://cc17-103-249-89-165.ngrok-free.app/getOp"
+      );
 
       setOutput(response.data.classification_output);
     } catch (err) {
