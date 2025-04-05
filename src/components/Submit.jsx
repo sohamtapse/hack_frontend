@@ -30,7 +30,7 @@ const Submit = () => {
   return (
     <div className="flex flex-col items-center justify-center my-10 w-[95%] sm:w-[700px] lg:w-[1000px] bg-zinc-700 text-white border-white border-2 rounded-xl px-4 sm:px-8">
       <h1 className="text-2xl sm:text-3xl font-bold my-4 text-center">
-        Check Your Ans
+        AI Evaluation engine
       </h1>
 
       <button

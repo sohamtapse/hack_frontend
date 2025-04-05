@@ -8,7 +8,7 @@ const Home = () => {
     <div className="bg-zinc-800 min-h-screen w-screen flex flex-col items-center">
       <div>
         <h1 className="text-3xl sm:text-4xl md:text-5xl text-white my-5 text-center">
-          AI Evaluation engine
+          LearnNova
         </h1>
       </div>
       <div className="flex flex-col sm:flex-row gap-5 sm:gap-10 justify-center items-center px-4">
