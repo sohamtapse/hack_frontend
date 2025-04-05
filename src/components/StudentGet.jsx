@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import { Axios } from "./Axios";
 
 const StudentGet = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -21,13 +21,9 @@ const StudentGet = () => {
 
     try {
       setLoading(true);
-      const res = await axios.post(
-        "https://cc17-103-249-89-165.ngrok-free.app/studentUpload",
-        formData,
-        {
-          headers: { "Content-Type": "multipart/form-data" },
-        }
-      );
+      const res = await Axios.post("/studentUpload", formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
 
       setResponse(res.data);
     } catch (error) {

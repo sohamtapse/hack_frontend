@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import { Axios } from "./Axios";
 
 const Submit = () => {
   const [loading, setLoading] = useState(false);
@@ -10,12 +10,11 @@ const Submit = () => {
     setLoading(true);
     setOutput(null);
     setError(null);
-
+    console.log("h");
     try {
-      const response = await axios.get(
-        "https://cc17-103-249-89-165.ngrok-free.app/getOp"
-      );
-
+      console.log("2");
+      const response = await Axios.get("/getOp");
+      console.log("1");
       setOutput(response.data.classification_output);
     } catch (err) {
       setError(err.response?.data?.error || "Failed to execute notebook.");
