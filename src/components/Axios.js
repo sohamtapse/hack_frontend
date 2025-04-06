@@ -3,7 +3,7 @@
 import axios from "axios";
 
 export const Axios = axios.create({
-  baseURL: "https://fc28-103-249-89-199.ngrok-free.app", // replace with your backend URL
+  baseURL: "https://5423-103-249-89-61.ngrok-free.app", // replace with your backend URL
   headers: {
     "Content-Type": "application/json",
   },
